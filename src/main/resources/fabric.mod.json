@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "foolishness",
+  "version": "${version}",
+  "name": "Foolishness",
+  "description": "Axiom unlocker",
+  "authors": ["AlexChecker"],
+  "contact": {
+    "email": "alex.checker@alexchecker.ru"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/foolishness/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "ru.alexchecker.foolishness.client.FoolishnessClient"
+    ],
+    "main": [
+      "ru.alexchecker.foolishness.Foolishness"
+    ]
+  },
+  "mixins": [
+    "foolishness.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "axiom": "*"
+  }
+}
