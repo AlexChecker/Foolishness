@@ -8,7 +8,7 @@
   "contact": {
     "email": "alex.checker@alexchecker.ru"
   },
-  "license": "All-Rights-Reserved",
+  "license": "All points of the Minecraft EULA are protected",
   "icon": "assets/foolishness/icon.png",
   "environment": "*",
   "entrypoints": {
