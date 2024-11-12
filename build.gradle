@@ -1,6 +1,7 @@
 plugins {
     id 'fabric-loom' version '1.8-SNAPSHOT'
     id 'maven-publish'
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 version = project.mod_version
@@ -23,6 +24,16 @@ repositories {
     }
 }
 
+modrinth {
+    token = "mrp_dOhd1ieY80IpfGRWy3bCKp7XBU8Umo8SjF5uCQgR4eXftv6KiDmpCErpj6zT"
+    projectId = "foolishness"
+    versionType = "release"
+    uploadFile = remapJar
+    gameVersions = ["1.21"]
+    loaders = ["fabric"]
+
+}
+
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -31,7 +42,7 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "com.moulberry.axiom:Axiom-4.1.1-for-MC1.21:1.21"
+    modImplementation "com.moulberry.axiom:Axiom-4.2.0-for-MC1.21:1.21.1"
     implementation "com.moulberry.axiomclientapi:axiomclientapi:1.0.0"
     implementation "com.moulberry.mixinconstraints:mixinconstraints:1.0.1"
     //implementation "me.axieum.mcmod.authme:authme-8.0.0+1.21:1.21"
